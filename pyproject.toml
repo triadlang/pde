@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "triad-pde"
+version = "0.1.0"
+description = "PDE solver and research toolkit for the Triad equation (P1+P2+P3)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "qrv0" }
+]
+keywords = [
+    "triad",
+    "triadlang",
+    "pde",
+    "nonlinear-schrodinger",
+    "fractional-laplacian",
+    "fluctuation-dissipation",
+    "mori-zwanzig",
+    "memory-kernel",
+    "split-step-fourier",
+    "open-quantum-system",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+science = ["scipy>=1.10"]
+viz = ["matplotlib>=3.7"]
+gpu = ["cupy-cuda12x"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["triad_pde*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
