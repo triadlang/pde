@@ -165,16 +165,6 @@ Building these requires the rest of the TriadLang native runtime (`triad_rt.h`, 
 
 ## Examples
 
-`examples/python/` — runnable Python scripts:
-
-1. `01_basic_solver.py` — chaos at t=0, structure at t=T
-2. `02_cross_domain_regimes.py` — nine of the seventeen regimes side by side
-3. `03_coupled_substrates.py` — ring of three substrates from three regimes
-4. `04_self_calibrator.py` — Gauss-Newton calibration with no external target
-5. `05_memory_recall.py` — Hopfield recall through P2 memory fields
-6. `06_sat_interference.py` — SAT encoded as initial interference pattern
-7. `07_pde_vs_dft_benchmark.py` — FFT solver vs naive Python DFT, same physics
-
 `examples/tri/` — original `.tri` programs from the parent project. These need the TriadLang language runtime to execute; the Python API above does not.
 
 ---
